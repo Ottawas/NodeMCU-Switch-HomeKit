@@ -1,5 +1,5 @@
 # HomeKit - Simple Led IR
-#
+
 Materiel utilisé:
 - 1X Raspberry Pi Zero (aliexpress.com/item/32895891785.html)
 - 1X Dongle WiFi pour Raspberry Pi (aliexpress.com/item/32798387984.html)
@@ -11,14 +11,14 @@ Materiel utilisé:
 Pour le branchement, référez-vous à ce qui est marqué sur l'émetteur infrarouge.
 
 # Fonctionnement
-#
+
   - Simuler une lumière simple via HomeKit2MQTT hébergé sur un Raspberry Pi.
   - Envoyer une requête infrarouge à l'allumage et extinction avec un ESP8266.
   - Possibilité de modifier le code via OTA (Over The Air).
 
 
 # Installation
-#
+
 
 Préparer HomeKit2MQTT:
   - Personnellement j'utilise un Raspberry Pi Zero avec une carte SD de 16Go.
