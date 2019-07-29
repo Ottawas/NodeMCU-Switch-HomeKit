@@ -44,13 +44,13 @@ Il vous faudra maintenant installer les librairies requises:
 
 
 Puis vous n'avez plus qu'à upload le code sur l'ESP8266 et modifier quelques lignes:
-	`const char* ssid = "SSID DU WIFI";`
-	`const char* password = "MOT DE PASSE DU WIFI";` 
-	`const char* mqtt_server = "IP Locale du Raspberry";`	
-	`irsend.sendNEC(0xFF02FD, 32);` (Paquet IR à envoyer)
-	`client.subscribe("hue/set/lights/lampe");` (Modifier par la configuration de votre HomeKit2MQTT)
-	`ArduinoOTA.setHostname("ESP-LED");` (Nom de l'ESP8266 pour OTA)
-	`ArduinoOTA.setPassword("led");` (Mot de passe pour l'OTA)
+-	`const char* ssid = "SSID DU WIFI";`
+-	`const char* password = "MOT DE PASSE DU WIFI";` 
+-	`const char* mqtt_server = "IP Locale du Raspberry";`	
+-	`irsend.sendNEC(0xFF02FD, 32);` (Paquet IR à envoyer)
+-	`client.subscribe("hue/set/lights/lampe");` (Modifier par la configuration de votre HomeKit2MQTT)
+-	`ArduinoOTA.setHostname("ESP-LED");` (Nom de l'ESP8266 pour OTA)
+-	`ArduinoOTA.setPassword("led");` (Mot de passe pour l'OTA)
 	
 # Utiliser l'OTA
 ![OTA](https://image.prntscr.com/image/p9bYNkNvTX6ShD0IJjHk_Q.png)
