@@ -1,8 +1,9 @@
+
 # HomeKit - Simple Led IR
 
 Materiel utilisé:
-- 1X Raspberry Pi Zero (aliexpress.com/item/32895891785.html)
-- 1X Dongle WiFi pour Raspberry Pi (aliexpress.com/item/32798387984.html)
+- 1X Raspberry Pi Zero **OU** 1X Machine Virtuelle Freebox.
+- SI Raspbbery: 1X Dongle WiFi pour Raspberry Pi (aliexpress.com/item/32798387984.html)
 
 - 1X NodeMCU (aliexpress.com/item/32665100123.html)
 - 1X Émetteur Infrarouge (aliexpress.com/item/1972945414.html)
@@ -12,7 +13,7 @@ Pour le branchement, référez-vous à ce qui est marqué sur l'émetteur infrar
 
 # Fonctionnement
 
-  - Simuler une lumière simple via HomeKit2MQTT hébergé sur un Raspberry Pi.
+  - Simuler un switch/interrupteur via HomeKit2MQTT hébergé sur un Raspberry Pi (chez moi sur la Freebox Delta via une VM Debian 10).
   - Envoyer une requête infrarouge à l'allumage et extinction avec un ESP8266.
   - Possibilité de modifier le code via OTA (Over The Air).
 
@@ -21,7 +22,7 @@ Pour le branchement, référez-vous à ce qui est marqué sur l'émetteur infrar
 
 
 Préparer HomeKit2MQTT:
-  - Personnellement j'utilise un Raspberry Pi Zero avec une carte SD de 16Go.
+  - Personnellement j'utilise une VM Freebox (Debian 10).
   - Tutoriel pour l'installer HomeKit2MQTT:
  https://www.studiopieters.nl/homebridge-homekit-2-mqtt/
 
@@ -52,11 +53,11 @@ Il vous faudra maintenant installer les librairies requises:
 Puis vous n'avez plus qu'à upload le code sur l'ESP8266 et modifier quelques lignes:
 -	`const char* ssid = "SSID DU WIFI";`
 -	`const char* password = "MOT DE PASSE DU WIFI";` 
--	`const char* mqtt_server = "IP Locale du Raspberry";`	
+-	`const char* mqtt_server = "IP Locale du Raspberry ou VM";`	
 -	`irsend.sendNEC(0xFF02FD, 32);` (Paquet IR à envoyer)
 -	`client.subscribe("hue/set/lights/lampe");` (Modifier par la configuration de votre HomeKit2MQTT)
--	`ArduinoOTA.setHostname("ESP-LED");` (Nom de l'ESP8266 pour OTA)
--	`ArduinoOTA.setPassword("led");` (Mot de passe pour l'OTA)
+-	`ArduinoOTA.setHostname("ESP-SWITCH");` (Nom de l'ESP8266 pour OTA)
+-	`ArduinoOTA.setPassword("MOT DE PASSE");` (Mot de passe pour l'OTA)
 	
 
 
@@ -66,7 +67,7 @@ Puis vous n'avez plus qu'à upload le code sur l'ESP8266 et modifier quelques li
 
 ### ToDo
 
- - Ajouter la fonction RGB
+ - ~~NOTHING~~ 
 
 License
 ----
