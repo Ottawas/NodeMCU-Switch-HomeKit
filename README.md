@@ -1,5 +1,5 @@
 
-# HomeKit - Simple Led IR
+# HomeKit - Switch / Interrupteur
 
 Materiel utilisé:
 - 1X Raspberry Pi Zero **OU** 1X Machine Virtuelle Freebox.
