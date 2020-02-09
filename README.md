@@ -1,4 +1,5 @@
 
+
 # HomeKit - Switch / Interrupteur
 
 Materiel utilisé:
@@ -60,7 +61,8 @@ Puis vous n'avez plus qu'à upload le code sur l'ESP8266 et modifier quelques li
 -	`ArduinoOTA.setPassword("MOT DE PASSE");` (Mot de passe pour l'OTA)
 	
 
-
+# Résultat
+![Final](https://s5.gifyu.com/images/Switch-HomeKit.gif)
 
 # Utiliser l'OTA
 ![OTA](https://image.prntscr.com/image/p9bYNkNvTX6ShD0IJjHk_Q.png)
